@@ -1,0 +1,256 @@
+
+
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@font-face {
+    font-family: 'Habibi';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/habibi/v21/CSR-4zFWkuqcTTNyQxhfVOY.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Habibi';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/habibi/v21/CSR-4zFWkuqcTTNyTRhf.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Irish Grover';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/irishgrover/v23/buExpoi6YtLz2QW7LA4flVgv__RP.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  
+
+/* -------------------- CSS RESET ---------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root {
+    --clr-green: #06A816;
+    --clr-orange: #E75D02;
+    --clr-blacl: #000000;
+    --clr-white: #ffffff;
+}
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+
+body {
+    font-family: 'Habibi';
+}
+
+h1, h2, h3 {
+    font-family:'Irish Grover';
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+li {
+background-color: var(--clr-orange);
+color: var(--clr-white);
+text-align: center;
+width: 400px;
+margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.75em;
+    padding: 10px;
+}
+
+h3, body {
+    font-size: 1.5em;
+}
+
+figure {
+    text-align: center;   
+}
+
+header, footer {
+    background-color: var(--clr-green);
+    color: var(--clr-white);
+}
+
+figcaption {
+    padding: 10px;
+    background-color: rgb(0,0,0, 50%);
+    color: var(--clr-white);
+    z-index: 1;
+    position: relative;
+    top: -160px;
+}
+
+figure {
+    z-index: 0;
+}
+
+p {
+    margin: 10px;
+ }
+
+h3 { 
+    text-align: center;
+}
+
+ .copyright {
+    color: var(--clr-green);
+    text-align: center;
+ }
+
+
+/* Small styles */
+@media (min-width: 428px) {
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+ footer {
+    text-align: center;
+ }
+.vegetables {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.fruits {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+}
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media (min-width: 834px) {
+
+.header {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+}
+ul {
+display: inline-flex;
+flex-direction: row;
+gap: 70px;
+}
+
+.fruits {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+
+.vegetables {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+} 
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+}
+
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media (min-width: 1280px) {
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.nav {
+    float: right;
+    position: relative;
+    bottom: 65px;
+
+}
+
+.fruits {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+
+.vegetables {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+
+}
+
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media (min-width: 1440px) {
+
+
+.fruits {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.vegetables {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+}
